@@ -8,10 +8,11 @@
 #   PASSWORDS
 #
 # Commands:
-#   hubot pwd-me - panzy
+#   hubot pwd-me - Returns the password for the account, if it exists
 #
 # Notes:
-#   <optional notes required for the script>
+#   Only users with the admin role can access these scripts, to add yourself as
+#   admin, access the Heroku dashboard
 #
 # Author:
 #   rzhade3
