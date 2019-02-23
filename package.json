@@ -20,7 +20,7 @@
     "node": "11.0.0"
   },
   "devDependencies": {
-    "coffeelint": "1.16.2"
+    "coffeelint": "2.1.0"
   },
   "scripts": {
     "test": "coffeelint scripts/*.coffee"
