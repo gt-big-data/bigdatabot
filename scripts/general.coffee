@@ -1,8 +1,20 @@
 # Description:
-#   General scripts for club members
+#  General scripts for club members
+#
+# Dependencies:
+#
+#
+# Configuration:
+#
+#
+# Commands:
+#   hubot info - Returns information about Big Data Club
 #
 # Notes:
 #
+#
+# Author:
+#   rzhade3
 
 module.exports = (robot) ->
 
