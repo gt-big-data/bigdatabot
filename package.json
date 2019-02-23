@@ -5,7 +5,8 @@
   "author": "gtbigdata@gmail.com",
   "description": "Helper bot for GT Big Data Club",
   "dependencies": {
-    "hubot": "^3.1.1",
+    "google-spreadsheet": "^2.0.7",
+    "hubot": "^3.2.0",
     "hubot-auth": "^2.1.0",
     "hubot-diagnostics": "^1.0.0",
     "hubot-help": "^1.0.1",
@@ -13,9 +14,15 @@
     "hubot-rules": "^1.0.0",
     "hubot-scripts": "^2.17.2",
     "hubot-shipit": "^0.2.1",
-    "hubot-slack": "^4.5.5"
+    "hubot-slack": "^4.6.0"
   },
   "engines": {
     "node": "11.0.0"
+  },
+  "devDependencies": {
+    "coffeelint": "1.16.2"
+  },
+  "scripts": {
+    "test": "coffeelint scripts/*.coffee"
   }
 }
