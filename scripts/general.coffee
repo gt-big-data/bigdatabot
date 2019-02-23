@@ -12,12 +12,12 @@ module.exports = (robot) ->
       "facebook.com/gtbigdataclub" +
       "\n\n" +
       "We are active on Social Media!\n" +
-      "Facebook: facebook.com/gtbigdataclub\n"
-      "GitHub: github.com/gt-big-data\n" +
-      "Twitter: twitter.com/gtbigdataclub\n" +
-      "Instagram: instagram.com/gtbigdata/" +
+      "*Facebook:* facebook.com/gtbigdataclub\n" +
+      "*GitHub:* github.com/gt-big-data\n" +
+      "*Twitter:* twitter.com/gtbigdataclub\n" +
+      "*Instagram:* instagram.com/gtbigdata/" +
       "\n\n" +
-      "Other Useful Links:\n" +
-      "Google Drive: goo.gl/n3aYVu\n" +
-      "Slack: bigdataclub.slack.com\n" +
-      "Wiki: github.com/gt-big-data/wiki/wiki"
+      "Other Useful Links\n" +
+      "*Google Drive:* goo.gl/n3aYVu\n" +
+      "*Slack:* bigdataclub.slack.com\n" +
+      "*Wiki:* github.com/gt-big-data/wiki/wiki"
