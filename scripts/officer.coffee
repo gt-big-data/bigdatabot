@@ -9,6 +9,8 @@
 #
 # Commands:
 #   hubot pwd-me - Returns the password for the account, if it exists
+#   hubot reset attendance - Resets up attendance
+#   hubot attendance - Closes attendance, and prints to #officers
 #
 # Notes:
 #   Only users with the admin role can access these scripts, to add yourself as
@@ -50,3 +52,31 @@ module.exports = (robot) ->
     robot.messageRoom room.id, msg
 
     return
+
+
+  robot.respond /reset attendance/i, (res) ->
+    role = 'admin'
+    username = res.message.user.name
+    user = robot.brain.userForName(username)
+    return res.reply "#{name} does not exist" unless user?
+
+    unless robot.auth.hasRole(user, role)
+      res.reply "Access Denied. You need role #{role} to perform this action."
+      return
+
+    robot.brain.set 'attendees', []
+    return res.reply("Attendees successfully reset!")
+
+
+  robot.respond /attendance/i, (res) ->
+    role = 'admin'
+    username = res.message.user.name
+    user = robot.brain.userForName(username)
+    return res.reply "#{name} does not exist" unless user?
+
+    unless robot.auth.hasRole(user, role)
+      res.reply "Access Denied. You need role #{role} to perform this action."
+      return
+
+    attendees = robot.brain.get 'attendees'
+    return res.reply(attendees)
