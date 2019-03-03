@@ -22,12 +22,8 @@ module.exports = (robot) ->
     name = res.message.user.slack.profile.real_name
 
     attendees = robot.brain.get('attendees')
-    if name
-      new_kv = {'email': email, 'name': name}
-    else
-      new_kv = {'email': email}
-    if attendees.indexOf(new_kv) == -1 # Checking to see if already exists
-      attendees.push(new_kv)
+    if attendees.indexOf(email) == -1 # Checking to see if already exists
+      attendees.push(email)
     robot.brain.set 'attendees', attendees
 
     return res.reply "Marked you as attending!"

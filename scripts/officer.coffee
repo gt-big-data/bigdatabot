@@ -8,7 +8,8 @@
 #   PASSWORDS
 #
 # Commands:
-#   hubot pwd-me - Returns the password for the account, if it exists. For officers
+#   hubot pwd-me - Returns the password for the account, if it exists.
+#                  For officers
 #   hubot reset attendance - Resets attendance, For officers
 #   hubot print attendance - Closes attendance, for officers
 #
