@@ -26,7 +26,7 @@ module.exports = (robot) ->
       new_kv = {'email': email, 'name': name}
     else
       new_kv = {'email': email}
-    if attendees.indexof(new_kv) == -1 # Checking to see if already exists
+    if attendees.indexOf(new_kv) == -1 # Checking to see if already exists
       attendees.push(email)
     robot.brain.set 'attendees', attendees
 
