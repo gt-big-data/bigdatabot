@@ -8,7 +8,7 @@
 #   ATTENDANCE
 #
 # Commands:
-#   bigdatabot im here - Marks the user as attending in the attendance
+#   bigdatabot present - Marks the user as attending in the attendance
 #
 # Notes:
 #
@@ -17,7 +17,7 @@
 #   rzhade3
 
 module.exports = (robot) ->
-  robot.respond /im here/i, (res) ->
+  robot.respond /present/i, (res) ->
     email = res.message.user.email_address
     name = res.message.user.slack.profile.real_name
 
@@ -27,7 +27,7 @@ module.exports = (robot) ->
     else
       new_kv = {'email': email}
     if attendees.indexOf(new_kv) == -1 # Checking to see if already exists
-      attendees.push(email)
+      attendees.push(new_kv)
     robot.brain.set 'attendees', attendees
 
     return res.reply "Marked you as attending!"

@@ -8,9 +8,9 @@
 #   PASSWORDS
 #
 # Commands:
-#   hubot pwd-me - Returns the password for the account, if it exists
-#   hubot reset attendance - Resets up attendance
-#   hubot attendance - Closes attendance, and prints to #officers
+#   hubot pwd-me - Returns the password for the account, if it exists. For officers
+#   hubot reset attendance - Resets attendance, For officers
+#   hubot print attendance - Closes attendance, for officers
 #
 # Notes:
 #   Only users with the admin role can access these scripts, to add yourself as
@@ -68,7 +68,7 @@ module.exports = (robot) ->
     return res.reply("Attendees successfully reset!")
 
 
-  robot.respond /attendance/i, (res) ->
+  robot.respond /print attendance/i, (res) ->
     role = 'admin'
     username = res.message.user.name
     user = robot.brain.userForName(username)
