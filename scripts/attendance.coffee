@@ -18,11 +18,15 @@
 
 module.exports = (robot) ->
   robot.respond /im here/i, (res) ->
-    email = res.message.user.profile.email
-    username = res.message.user.name
+    email = res.message.user.email_address
+    name = res.message.user.slack.profile.real_name
 
     attendees = robot.brain.get('attendees')
-    if attendees.indexof(email) == -1
+    if name
+      new_kv = {'email': email, 'name': name}
+    else
+      new_kv = {'email': email}
+    if attendees.indexof(new_kv) == -1 # Checking to see if already exists
       attendees.push(email)
     robot.brain.set 'attendees', attendees
 
