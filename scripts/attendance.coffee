@@ -22,8 +22,8 @@ module.exports = (robot) ->
     username = res.message.user.name
 
     attendees = robot.brain.get('attendees')
-    if array.indexof(email) == -1
+    if attendees.indexof(email) == -1
       attendees.push(email)
     robot.brain.set 'attendees', attendees
 
-    return
+    return res.reply "Marked you as attending!"
