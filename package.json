@@ -5,6 +5,7 @@
   "author": "gtbigdata@gmail.com",
   "description": "Helper bot for GT Big Data Club",
   "dependencies": {
+    "@sentry/node": "^4.6.4",
     "google-spreadsheet": "^2.0.7",
     "hubot": "^3.2.0",
     "hubot-auth": "^2.1.0",
